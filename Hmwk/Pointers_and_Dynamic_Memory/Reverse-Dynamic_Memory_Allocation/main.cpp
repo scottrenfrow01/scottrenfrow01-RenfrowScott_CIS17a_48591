@@ -14,9 +14,6 @@ int main(){
 	int arySize, //The array size
 	    *array; //Pointer to the array
 	
-	//Get the array size from the user    
-	cin>>arySize;
-	
 	//Function to fill the array    
 	array=getData(arySize);
 	
@@ -33,12 +30,17 @@ int main(){
 	//Outputs the reverse order array
 	prntDat(array, arySize);
 	
+	delete []array;
+	
 	
 	return 0;
 }
 
 //Function which fills the array
 int *getData(int &arySize){
+    //Get the array size from the user    
+    cin>>arySize;
+	
     //Allocate memory
     int *array=new int[arySize];
     
