@@ -13,8 +13,6 @@ int main(){
     //Declare Variables 
     int arySize, //The size of the array
         *array; //The dynamic array
-        
-    cin>>arySize; //User inputs the size of the array
     
     array=getData(arySize); //Function that gets the array data from user
     
@@ -24,6 +22,9 @@ int main(){
     float *mid=median(array, arySize); //Function that creates a float array and calculates the median
     
     prntMed(mid, arySize); //Print the median and the median array
+	
+	delete []array;
+	delete []mid;
     
 	//your code here
 	return 0;
@@ -31,6 +32,8 @@ int main(){
 
 //Function that gets the array data from the user
 int *getData(int &arySize){
+    cin>>arySize; //User inputs the size of the array
+	
     //Allocate memory
     int *num=new int[arySize];
     
