@@ -28,7 +28,7 @@ int main(){
 	//Function which outputs the augmented array
 	prntAry(array, arySize);
 	
-	deleter []array;
+	delete []array;
 	
 	
 	return 0;
