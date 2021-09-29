@@ -14,9 +14,6 @@ int main(){
 	    *array, //Pointer to the array
 	    *sum;  //Pointer to the sum array
 	
-	//Get the array size from the user    
-	cin>>arySize;
-	
 	//Function to fill the array    
 	array=getData(arySize);
 	
@@ -29,11 +26,17 @@ int main(){
 	//Prints th sum array
 	prntAry(sum, arySize);
 	
+	delete []sum;
+	delete []array;
+	
 	return 0;
 }
 
 //Function which fills the array
 int *getData(int &arySize){
+    //Get the array size from the user    
+    cin>>arySize;
+	
     //Allocate memory
     int *array=new int[arySize];
     
